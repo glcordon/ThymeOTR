@@ -1,0 +1,12 @@
+Place your image files in this folder:
+
+  hero.jpg         — Full-width background photo for the hero section
+  logo.png         — Restaurant logo (transparent background preferred)
+  logo.svg         — SVG version of logo if available
+  special-1.jpg    — Photo for first special card
+  special-2.jpg    — Photo for second special card
+  special-3.jpg    — Photo for third special card
+
+After adding images, update index.html and css/styles.css:
+  - In index.html: uncomment the <img> tag in the nav and special-card sections
+  - In css/styles.css: the hero background-image is already set to url('../images/hero.jpg')
