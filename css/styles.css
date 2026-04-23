@@ -138,10 +138,11 @@ address { font-style: normal; }
 
 .nav__logo-text {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--accent);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
+  display: inline;
 }
 
 .nav__links {
@@ -362,11 +363,19 @@ address { font-style: normal; }
 }
 
 /* Hero logo */
+.hero__logo-wrap {
+  margin: 0 auto 1.5rem;
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.55);
+}
+
 .hero__logo {
-  max-height: 140px;
-  width: auto;
-  margin: 0 auto 1rem;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.6));
+  display: block;
+  max-width: 320px;
+  width: 80vw;
+  height: auto;
 }
 
 /* Menu notes & allergen */
