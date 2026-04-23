@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ThymeOTR</title>
-  <meta name="description" content="ThymeOTR — [TAGLINE PLACEHOLDER]. Fine dining in [CITY PLACEHOLDER]." />
+  <title>Thyme on the River | Portsmouth, VA</title>
+  <meta name="description" content="Thyme on the River — Dine. Sip. Unwind. Fine dining at 1 High Street, Portsmouth, VA." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -16,16 +16,15 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#hero" class="nav__logo">
-        <!-- Replace img src with real logo file, or keep text fallback -->
-        <!-- <img src="images/logo.png" alt="ThymeOTR" class="nav__logo-img" /> -->
-        <span class="nav__logo-text">ThymeOTR</span>
+        <img src="images/logo.png" alt="Thyme on the River" class="nav__logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
+        <span class="nav__logo-text" style="display:none;">Thyme on the River</span>
       </a>
       <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="nav__links" id="nav-links">
         <a href="#menu" class="nav__link">Menu</a>
-        <a href="#menu" class="nav__link nav__link--specials">Specials</a>
+        <a href="#menu" class="nav__link nav__link--specials" data-open-tab="specials">Specials</a>
         <a href="#contact" class="nav__link">Contact</a>
       </nav>
     </div>
@@ -33,13 +32,12 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="hero">
-    <!-- Replace background-image in CSS with real hero photo -->
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <!-- Replace with real logo image if desired -->
+      <img src="images/logo.png" alt="Thyme on the River" class="hero__logo" onerror="this.style.display='none';" />
       <p class="hero__eyebrow">Welcome to</p>
-      <h1 class="hero__title">ThymeOTR</h1>
-      <p class="hero__tagline">[Your tagline goes here — e.g. "Fresh, seasonal cuisine in the heart of OTR"]</p>
+      <h1 class="hero__title">Thyme on the River</h1>
+      <p class="hero__tagline">Dine. Sip. Unwind.</p>
       <a href="#menu" class="btn btn--accent">View Our Menu</a>
     </div>
   </section>
@@ -51,163 +49,351 @@
 
       <!-- Tab toggle -->
       <div class="tab-bar" role="tablist">
-        <button class="tab-btn tab-btn--active" role="tab" aria-selected="true" data-tab="full-menu">Full Menu</button>
-        <button class="tab-btn" role="tab" aria-selected="false" data-tab="specials">Today's Specials</button>
+        <button class="tab-btn tab-btn--active" role="tab" aria-selected="true" data-tab="lunch-menu">Lunch</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="dinner-menu">Dinner</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="specials">Specials</button>
       </div>
 
-      <!-- FULL MENU PANEL -->
-      <div class="tab-panel tab-panel--active" id="full-menu">
+      <!-- ===== LUNCH MENU PANEL ===== -->
+      <div class="tab-panel tab-panel--active" id="lunch-menu">
+
+        <!-- SALADS & APPETIZERS -->
+        <div class="menu-category">
+          <h3 class="menu-category__title">Salads &amp; Appetizers</h3>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">House Salad</span>
+              </div>
+              <span class="menu-item__price">$8.99</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Jerk Chicken Salad w. Chicken</span>
+              </div>
+              <span class="menu-item__price">$14.99</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">NOLA Blackened Chicken Cobb Salad</span>
+              </div>
+              <span class="menu-item__price">$15.99</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Jerk Chicken Eggrolls</span>
+              </div>
+              <span class="menu-item__price">$13.99</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Salmon Bites</span>
+              </div>
+              <span class="menu-item__price">$13.99</span>
+            </div>
+          </div>
+          <p class="menu-note">Add: Salmon $12 &bull; Shrimp $9 &bull; Grilled Chicken $7</p>
+        </div>
+
+        <!-- HANDHELDS -->
+        <div class="menu-category">
+          <h3 class="menu-category__title">Handhelds <span class="menu-category__sub">Choice of One Side</span></h3>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Crab Cake Sliders</span>
+              </div>
+              <span class="menu-item__price">$16.99</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Jerk Chicken Caesar Wrap</span>
+              </div>
+              <span class="menu-item__price">$13.99</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Shrimp Po Boy</span>
+              </div>
+              <span class="menu-item__price">$14.99</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Seared Salmon Sandwich</span>
+              </div>
+              <span class="menu-item__price">$15.99</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- LUNCH MAINS -->
+        <div class="menu-category">
+          <h3 class="menu-category__title">Main</h3>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Fried Catfish &amp; Choice of 2 Sides</span>
+              </div>
+              <span class="menu-item__price">$17.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Catfish Acadiana</span>
+              </div>
+              <span class="menu-item__price">$22.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Etouffe Crawfish</span>
+              </div>
+              <span class="menu-item__price">$18.00</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Red Beans &amp; Rice</span>
+              </div>
+              <span class="menu-item__price">$11.99</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Oxtail w. Rice and Peas &amp; Choice of 2nd Side</span>
+              </div>
+              <span class="menu-item__price">$19.69</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Jerk Chicken w. Rice and Peas &amp; Choice of 2nd Side</span>
+              </div>
+              <span class="menu-item__price">$14.99</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Chicken, Sausage, Crab &amp; Shrimp Gumbo</span>
+              </div>
+              <span class="menu-item__price">$16.99</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Rasta Pasta</span>
+              </div>
+              <span class="menu-item__price">$12.99</span>
+            </div>
+          </div>
+          <p class="menu-note">Rasta Pasta Add-ons: Chicken $7 &bull; Shrimp $9 &bull; Salmon $12 &bull; Chicken &amp; Shrimp $9</p>
+        </div>
+
+        <!-- SIDES -->
+        <div class="menu-category">
+          <h3 class="menu-category__title">Sides</h3>
+          <div class="sides-grid">
+            <div class="menu-item"><span class="menu-item__name">Fries</span><span class="menu-item__price">$4</span></div>
+            <div class="menu-item"><span class="menu-item__name">Yams</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Sweet Potato Fries</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Rice &amp; Peas</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Macaroni &amp; Cheese</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Cabbage</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Side House Salad</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Caesar Side Salad</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">White Rice</span><span class="menu-item__price">$4</span></div>
+          </div>
+        </div>
+
+        <!-- DESSERT -->
+        <div class="menu-category">
+          <h3 class="menu-category__title">Dessert</h3>
+          <div class="menu-items">
+            <div class="menu-item">
+              <span class="menu-item__name">Vanilla Ice Cream Sandwich</span>
+              <span class="menu-item__price">$8.99</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-item__name">Cookie Ice Cream Sandwich</span>
+              <span class="menu-item__price">$8.99</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-item__name">Banana Pudding Ice Cream Sandwich</span>
+              <span class="menu-item__price">$8.99</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-item__name">Key Lime Pie Ice Cream Sandwich</span>
+              <span class="menu-item__price">$8.99</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /lunch-menu panel -->
+
+      <!-- ===== DINNER MENU PANEL ===== -->
+      <div class="tab-panel" id="dinner-menu">
+
+        <!-- SALADS -->
+        <div class="menu-category">
+          <h3 class="menu-category__title">Salads</h3>
+          <div class="menu-items">
+            <div class="menu-item">
+              <span class="menu-item__name">House Salad</span>
+              <span class="menu-item__price">$8.99</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-item__name">Jerk Chicken Salad w. Chicken</span>
+              <span class="menu-item__price">$17.99</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-item__name">NOLA Blackened Chicken Cobb Salad</span>
+              <span class="menu-item__price">$17.99</span>
+            </div>
+          </div>
+          <p class="menu-note">Add: Chicken $7 &bull; Shrimp $9 &bull; Salmon $12</p>
+        </div>
 
         <!-- APPETIZERS -->
         <div class="menu-category">
           <h3 class="menu-category__title">Appetizers</h3>
           <div class="menu-items">
             <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this appetizer goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
+              <span class="menu-item__name">Crab Cake Sliders</span>
+              <span class="menu-item__price">$15.99</span>
             </div>
             <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this appetizer goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
+              <span class="menu-item__name">Jerk Chicken Eggrolls</span>
+              <span class="menu-item__price">$13.99</span>
             </div>
             <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this appetizer goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
+              <span class="menu-item__name">Salmon Bites</span>
+              <span class="menu-item__price">$13.99</span>
             </div>
           </div>
         </div>
 
-        <!-- MAINS -->
+        <!-- MAIN COURSE -->
         <div class="menu-category">
-          <h3 class="menu-category__title">Mains</h3>
+          <h3 class="menu-category__title">Main Course</h3>
           <div class="menu-items">
             <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this entrée goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
+              <span class="menu-item__name">Fried Catfish &amp; Choice of 2 Sides</span>
+              <span class="menu-item__price">$25.00</span>
             </div>
             <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this entrée goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
+              <span class="menu-item__name">Catfish Acadiana</span>
+              <span class="menu-item__price">$28.00</span>
             </div>
             <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this entrée goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
+              <span class="menu-item__name">Etouffe Crawfish</span>
+              <span class="menu-item__price">$21.00</span>
             </div>
             <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this entrée goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
+              <span class="menu-item__name">Red Beans &amp; Rice</span>
+              <span class="menu-item__price">$14.99</span>
             </div>
+            <div class="menu-item">
+              <span class="menu-item__name">Oxtail w. Rice and Peas &amp; Choice of 2nd Side</span>
+              <span class="menu-item__price">$29.69</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-item__name">Jerk Chicken w. Rice and Peas &amp; Choice of 2nd Side</span>
+              <span class="menu-item__price">$18.99</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-item__name">Chicken, Sausage, Crab &amp; Shrimp Gumbo</span>
+              <span class="menu-item__price">$20.99</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-item__name">Rasta Pasta</span>
+              <span class="menu-item__price">$15.99</span>
+            </div>
+            <div class="menu-item menu-item--featured">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Thyme Garlic Butter Stuffed Lobster Tail</span>
+                <span class="menu-item__desc">Lobster tail stuffed with crabmeat, garnished in thyme garlic butter with asparagus</span>
+              </div>
+              <span class="menu-item__price">$52.99</span>
+            </div>
+          </div>
+          <p class="menu-note">Rasta Pasta Add-ons: Chicken $7 &bull; Shrimp $9 &bull; Salmon $12 &bull; Chicken &amp; Shrimp $15 &bull; Oxtails $12</p>
+        </div>
+
+        <!-- SIDES -->
+        <div class="menu-category">
+          <h3 class="menu-category__title">Sides</h3>
+          <div class="sides-grid">
+            <div class="menu-item"><span class="menu-item__name">Fries</span><span class="menu-item__price">$4</span></div>
+            <div class="menu-item"><span class="menu-item__name">Yams</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Sweet Potato Fries</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Rice &amp; Peas</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Macaroni &amp; Cheese</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Cabbage</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Side House Salad</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">Caesar Side Salad</span><span class="menu-item__price">$5</span></div>
+            <div class="menu-item"><span class="menu-item__name">White Rice</span><span class="menu-item__price">$4</span></div>
           </div>
         </div>
 
-        <!-- DESSERTS -->
+        <!-- DESSERT -->
         <div class="menu-category">
-          <h3 class="menu-category__title">Desserts</h3>
+          <h3 class="menu-category__title">Dessert</h3>
           <div class="menu-items">
             <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this dessert goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
+              <span class="menu-item__name">Vanilla Ice Cream Sandwich</span>
+              <span class="menu-item__price">$8.99</span>
             </div>
             <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this dessert goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
+              <span class="menu-item__name">Cookie Ice Cream Sandwich</span>
+              <span class="menu-item__price">$8.99</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-item__name">Banana Pudding Ice Cream Sandwich</span>
+              <span class="menu-item__price">$8.99</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-item__name">Key Lime Pie Ice Cream Sandwich</span>
+              <span class="menu-item__price">$8.99</span>
+            </div>
+            <div class="menu-item">
+              <span class="menu-item__name">Red Velvet Cake</span>
+              <span class="menu-item__price">$6.99</span>
             </div>
           </div>
         </div>
 
-        <!-- DRINKS -->
-        <div class="menu-category">
-          <h3 class="menu-category__title">Drinks</h3>
-          <div class="menu-items">
-            <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this drink goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
-            </div>
-            <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this drink goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
-            </div>
-            <div class="menu-item">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Item Name</span>
-                <span class="menu-item__desc">Short description of this drink goes here</span>
-              </div>
-              <span class="menu-item__price">$00</span>
-            </div>
-          </div>
-        </div>
+        <p class="menu-allergen">Concerns regarding food allergies, please alert your server prior to ordering. Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of food borne illness. A service charge of 18% will be added to parties of 6 or more.</p>
 
-      </div><!-- /full-menu panel -->
+      </div><!-- /dinner-menu panel -->
 
-      <!-- SPECIALS PANEL -->
+      <!-- ===== SPECIALS PANEL ===== -->
       <div class="tab-panel" id="specials">
-        <div class="specials-grid">
 
-          <div class="special-card">
-            <!-- <img src="images/special-1.jpg" alt="Special dish name" class="special-card__img" /> -->
-            <div class="special-card__img special-card__img--placeholder"></div>
-            <div class="special-card__body">
-              <span class="special-card__badge">Chef's Special</span>
-              <h3 class="special-card__name">Special Dish Name</h3>
-              <p class="special-card__desc">Description of today's special — ingredients, preparation style, what makes it stand out.</p>
-              <span class="special-card__price">$00</span>
-            </div>
+        <!-- Throwback R&B Thursday Event Card -->
+        <div class="event-card">
+          <div class="event-card__header">
+            <span class="event-card__day">Every Thursday</span>
+            <h3 class="event-card__title">Throwback R&amp;B Thursday</h3>
+            <p class="event-card__sub">DJ C-Nile &bull; Starts at 7 PM</p>
+            <p class="event-card__desc">Join us for a night of smooth throwback R&amp;B, good drinks, and grown vibes all evening.</p>
           </div>
-
-          <div class="special-card">
-            <div class="special-card__img special-card__img--placeholder"></div>
-            <div class="special-card__body">
-              <span class="special-card__badge">Weekend Only</span>
-              <h3 class="special-card__name">Special Dish Name</h3>
-              <p class="special-card__desc">Description of this featured item — what makes it seasonal or limited.</p>
-              <span class="special-card__price">$00</span>
+          <div class="event-card__body">
+            <div class="event-detail-grid">
+              <div class="event-detail">
+                <h4 class="event-detail__title">Drink Specials</h4>
+                <ul class="event-detail__list">
+                  <li>Wine Specials</li>
+                  <li>Beer Specials</li>
+                </ul>
+              </div>
+              <div class="event-detail">
+                <h4 class="event-detail__title">Throwback Vibes</h4>
+                <ul class="event-detail__list">
+                  <li>Classic R&amp;B All Night</li>
+                  <li>Smooth Sounds</li>
+                  <li>Good Energy</li>
+                  <li>Grown &amp; Sexy Atmosphere</li>
+                </ul>
+              </div>
             </div>
+            <p class="event-card__tagline">"Good music. Good drinks. Good vibes."</p>
+            <p class="event-card__fine">Dine-in only &bull; While supplies last &bull; Good vibes only</p>
           </div>
-
-          <div class="special-card">
-            <div class="special-card__img special-card__img--placeholder"></div>
-            <div class="special-card__body">
-              <span class="special-card__badge">Happy Hour</span>
-              <h3 class="special-card__name">Special Drink Name</h3>
-              <p class="special-card__desc">Description of this featured cocktail or drink special.</p>
-              <span class="special-card__price">$00</span>
-            </div>
-          </div>
-
         </div>
+
       </div><!-- /specials panel -->
 
     </div>
@@ -225,9 +411,14 @@
           <table class="hours-table">
             <tbody>
               <tr><td>Monday</td><td>Closed</td></tr>
-              <tr><td>Tuesday – Thursday</td><td>11am – 9pm</td></tr>
-              <tr><td>Friday – Saturday</td><td>11am – 11pm</td></tr>
-              <tr><td>Sunday</td><td>10am – 8pm</td></tr>
+              <tr><td>Tuesday</td><td>11 AM – 9 PM</td></tr>
+              <tr><td>Wednesday</td><td>11 AM – 10 PM</td></tr>
+              <tr><td>Thursday</td><td>11 AM – 10 PM</td></tr>
+              <tr><td>Friday</td><td>11 AM – 11 PM</td></tr>
+              <tr><td>Saturday</td><td>12 PM – 11 PM</td></tr>
+              <tr class="hours-table__divider"><td colspan="2"></td></tr>
+              <tr class="hours-table__special"><td>Sunday Brunch</td><td>12 PM – 3 PM</td></tr>
+              <tr class="hours-table__special"><td>Sunday Dinner</td><td>4 PM – 8 PM</td></tr>
             </tbody>
           </table>
         </div>
@@ -236,23 +427,20 @@
         <div class="contact-block">
           <h3 class="contact-block__title">Contact</h3>
           <address class="contact-address">
-            <p>[Street Address]</p>
-            <p>[City, State ZIP]</p>
+            <p>1 High Street</p>
+            <p>Portsmouth, VA</p>
             <p class="contact-address__phone"><a href="tel:+10000000000">(000) 000-0000</a></p>
-            <p><a href="mailto:info@thymeotr.com">info@thymeotr.com</a></p>
           </address>
         </div>
 
         <!-- MAP -->
         <div class="contact-block contact-block--map">
           <h3 class="contact-block__title">Location</h3>
-          <!-- Replace src with real Google Maps embed URL -->
           <div class="map-placeholder">
-            <p>Map coming soon</p>
-            <!-- <iframe
-              src="https://www.google.com/maps/embed?pb=REPLACE_WITH_REAL_EMBED_URL"
-              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade" title="ThymeOTR location"></iframe> -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.0!2d-76.2980!3d36.8354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ba9882e5f77771%3A0x1%2C1+High+St%2C+Portsmouth%2C+VA!5e0!3m2!1sen!2sus!4v1"
+              width="100%" height="250" style="border:0;border-radius:6px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Thyme on the River location"></iframe>
           </div>
         </div>
 
@@ -263,9 +451,8 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container footer__inner">
-      <span class="footer__logo">ThymeOTR</span>
+      <span class="footer__logo">Thyme on the River</span>
       <div class="footer__social">
-        <!-- Replace # with real social URLs -->
         <a href="#" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         </a>
@@ -273,7 +460,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
       </div>
-      <p class="footer__copy">&copy; <span id="year"></span> ThymeOTR. All rights reserved.</p>
+      <p class="footer__copy">&copy; <span id="year"></span> Thyme on the River. All rights reserved.</p>
     </div>
   </footer>
 
